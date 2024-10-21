@@ -1,0 +1,18 @@
+# Hi All this is Day 1 of the 30 days series of learning devops with me.
+What we will learn Today
+1. What is Docker
+2. Why Docker
+3. How to Install Docker Desktop
+4. How to Install Docker in Linux
+5. Creating Our First Image
+6. Creating our first Container
+7. What is Docker Hub
+8. Deploying our image to the LocalHost
+9. Deploying your Image to the Cloud
+10. Creating our virtual Machines
+
+# What is Docker
+Docker is an open platform that enables users to develop, ship, and run applications with ease. 
+Docker software is packaged as containers- a docker standardized unit. These containers have all the elements, \
+such as system tools, libraries, runtime, etc required by the software
+
