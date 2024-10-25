@@ -1,0 +1,38 @@
+#Step by Step to install tomcat in aazon linux
+sudo yum install java-17 -y
+
+
+cd /opt
+
+#Download tomcat binary
+wget https://downloads.apache.org/tomcat/tomcat-10/v10.1.31/bin/apache-tomcat-10.1.31.zip.asc
+
+#unzip tomcat binary
+tar -zvxf apache-tomcat-10.1.31.zip.asc
+
+#starting services 
+cd /opt/tomcat/bin
+./startup.sh
+#your tomcat will be running on public ip :8080 port
+
+# now create user to access the gui console
+cd /opt/tomcat/bin
+./shutdown.sh
+find /. -name tomcat-users.xml
+
+#go to directory
+cd /opt/tomcat/conf
+vi tomcat-users.xml
+# add these lines under users
+ <role rolename="manager-gui"/>
+ <role rolename="manager-script"/>
+ <role rolename="manager-jmx"/>
+ <role rolename="manager-status"/>
+ <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+ <user username="deployer" password="deployer" roles="manager-script"/>
+ <user username="tomcat" password="s3cret" roles="manager-gui"/>
+
+#save the file and again start the services
+user id :admin
+password : admin
+
